@@ -162,6 +162,10 @@ pip-log.txt
 # Mac crap
 .DS_Store
 
+#CakePHP stuff
+/app/config/core.php
+/app/config/database.php
+
 #CakePHP temp files, EXCEPT empty files
 /app/tmp
 !/app/tmp/cache/models/empty
