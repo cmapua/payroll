@@ -60,3 +60,10 @@ Download and install all this:
 1. Open 'db model.mwb' from Dropbox in Workbench
 2. Once you see the diagram, go to Database > Synchronize Model... (or `CTRL+SHIFT+Z`)
 3. Follow instructions in the wizard
+
+### Notes on Syncronization failures
+- sometimes just reordering generated queries will fix most errors
+- [this might help with errno 150's] (http://www.eliacom.com/mysql-gui-wp-errno-150.php)
+- `show engine innodb status` query will give better description of error
+- if all else fails, drop table in database and clean sync
+- or just drop db altogether :P
