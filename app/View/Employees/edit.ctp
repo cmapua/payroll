@@ -5,7 +5,6 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('employee_code');
-		echo $this->Form->input('work_id');
 		echo $this->Form->input('group_id');
 		echo $this->Form->input('percent');
 		echo $this->Form->input('trntype');
@@ -13,14 +12,6 @@
 		echo $this->Form->input('last_name');
 		echo $this->Form->input('MI');
 		echo $this->Form->input('empaddr');
-		echo $this->Form->input('farm');
-		echo $this->Form->input('farmname');
-		echo $this->Form->input('farm2');
-		echo $this->Form->input('fn2');
-		echo $this->Form->input('farm3');
-		echo $this->Form->input('fn3');
-		echo $this->Form->input('groupcode');
-		echo $this->Form->input('groupname');
 		echo $this->Form->input('rate');
 		echo $this->Form->input('sssno');
 		echo $this->Form->input('gross');

@@ -47,6 +47,8 @@ class EmployeesController extends AppController {
 				$this->Session->setFlash(__('The employee could not be saved. Please, try again.'));
 			}
 		}
+		$groups = $this->Employee->Group->find('list');
+		$this->set(compact('groups'));
 	}
 
 /**
@@ -71,6 +73,8 @@ class EmployeesController extends AppController {
 			$options = array('conditions' => array('Employee.' . $this->Employee->primaryKey => $id));
 			$this->request->data = $this->Employee->find('first', $options);
 		}
+		$groups = $this->Employee->Group->find('list');
+		$this->set(compact('groups'));
 	}
 
 /**

@@ -72,4 +72,13 @@ class Farm extends AppModel {
 		)
 	);
 
+	public $hasAndBelongsToMany = array(
+		'Employee' => array(
+			'className' => 'Employee',
+			'joinTable' => 'employees_farms',
+			'foreignKey' => 'farm_id',
+			'associationForeignKey' => 'employee_id',
+			'unique' => true
+		)
+	);
 }

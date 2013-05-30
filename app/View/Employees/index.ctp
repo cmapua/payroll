@@ -4,7 +4,6 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('employee_code'); ?></th>
-			<th><?php echo $this->Paginator->sort('work_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('group_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
@@ -14,14 +13,6 @@
 			<th><?php echo $this->Paginator->sort('last_name'); ?></th>
 			<th><?php echo $this->Paginator->sort('MI'); ?></th>
 			<th><?php echo $this->Paginator->sort('empaddr'); ?></th>
-			<th><?php echo $this->Paginator->sort('farm'); ?></th>
-			<th><?php echo $this->Paginator->sort('farmname'); ?></th>
-			<th><?php echo $this->Paginator->sort('farm2'); ?></th>
-			<th><?php echo $this->Paginator->sort('fn2'); ?></th>
-			<th><?php echo $this->Paginator->sort('farm3'); ?></th>
-			<th><?php echo $this->Paginator->sort('fn3'); ?></th>
-			<th><?php echo $this->Paginator->sort('groupcode'); ?></th>
-			<th><?php echo $this->Paginator->sort('groupname'); ?></th>
 			<th><?php echo $this->Paginator->sort('rate'); ?></th>
 			<th><?php echo $this->Paginator->sort('sssno'); ?></th>
 			<th><?php echo $this->Paginator->sort('gross'); ?></th>
@@ -37,7 +28,6 @@
 	<tr>
 		<td><?php echo h($employee['Employee']['id']); ?>&nbsp;</td>
 		<td><?php echo h($employee['Employee']['employee_code']); ?>&nbsp;</td>
-		<td><?php echo h($employee['Employee']['work_id']); ?>&nbsp;</td>
 		<td><?php echo h($employee['Employee']['group_id']); ?>&nbsp;</td>
 		<td><?php echo h($employee['Employee']['created']); ?>&nbsp;</td>
 		<td><?php echo h($employee['Employee']['modified']); ?>&nbsp;</td>
@@ -47,14 +37,6 @@
 		<td><?php echo h($employee['Employee']['last_name']); ?>&nbsp;</td>
 		<td><?php echo h($employee['Employee']['MI']); ?>&nbsp;</td>
 		<td><?php echo h($employee['Employee']['empaddr']); ?>&nbsp;</td>
-		<td><?php echo h($employee['Employee']['farm']); ?>&nbsp;</td>
-		<td><?php echo h($employee['Employee']['farmname']); ?>&nbsp;</td>
-		<td><?php echo h($employee['Employee']['farm2']); ?>&nbsp;</td>
-		<td><?php echo h($employee['Employee']['fn2']); ?>&nbsp;</td>
-		<td><?php echo h($employee['Employee']['farm3']); ?>&nbsp;</td>
-		<td><?php echo h($employee['Employee']['fn3']); ?>&nbsp;</td>
-		<td><?php echo h($employee['Employee']['groupcode']); ?>&nbsp;</td>
-		<td><?php echo h($employee['Employee']['groupname']); ?>&nbsp;</td>
 		<td><?php echo h($employee['Employee']['rate']); ?>&nbsp;</td>
 		<td><?php echo h($employee['Employee']['sssno']); ?>&nbsp;</td>
 		<td><?php echo h($employee['Employee']['gross']); ?>&nbsp;</td>

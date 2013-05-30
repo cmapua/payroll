@@ -44,19 +44,6 @@ class Work extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'Employee' => array(
-			'className' => 'Employee',
-			'foreignKey' => 'work_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
 		'Transaction' => array(
 			'className' => 'Transaction',
 			'foreignKey' => 'work_id',
@@ -72,4 +59,13 @@ class Work extends AppModel {
 		)
 	);
 
+	public $hasAndBelongsToMany = array(
+		'Employee' => array(
+			'className' => 'Employee',
+			'joinTable' => 'employees_works',
+			'foreignKey' => 'work_id',
+			'associationForeignKey' => 'employee_id',
+			'unique' => true
+		)
+	);
 }

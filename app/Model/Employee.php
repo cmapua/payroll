@@ -36,13 +36,6 @@ class Employee extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Work' => array(
-			'className' => 'Work',
-			'foreignKey' => 'work_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
 		'Group' => array(
 			'className' => 'Group',
 			'foreignKey' => 'group_id',
@@ -83,6 +76,23 @@ class Employee extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
+		)
+	);
+
+	public $hasAndBelongsToMany = array(
+		'Farm' => array(
+			'className' => 'Farm',
+			'joinTable' => 'employees_farms',
+			'foreignKey' => 'employee_id',
+			'associationForeignKey' => 'farm_id',
+			'unique' => true
+		),
+		'Work' => array(
+			'className' => 'Work',
+			'joinTable' => 'employees_works',
+			'foreignKey' => 'employee_id',
+			'associationForeignKey' => 'work_id',
+			'unique' => true
 		)
 	);
 
