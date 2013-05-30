@@ -163,14 +163,14 @@ pip-log.txt
 .DS_Store
 
 #CakePHP stuff
-/app/config/core.php
-/app/config/database.php
+app/Config/core.php
+app/Config/database.php
 
 #CakePHP temp files, EXCEPT empty files
-/app/tmp
-!/app/tmp/cache/models/empty
-!/app/tmp/cache/persistent/empty
-!/app/tmp/cache/views/empty
-!/app/tmp/logs/empty
-!/app/tmp/sessions/empty
-!/app/tmp/tests/empty
+app/tmp
+!app/tmp/cache/models/empty
+!app/tmp/cache/persistent/empty
+!app/tmp/cache/views/empty
+!app/tmp/logs/empty
+!app/tmp/sessions/empty
+!app/tmp/tests/empty
