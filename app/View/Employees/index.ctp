@@ -4,6 +4,10 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('employee_code'); ?></th>
+			<th><?php echo $this->Paginator->sort('work_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('group_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('created'); ?></th>
+			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th><?php echo $this->Paginator->sort('percent'); ?></th>
 			<th><?php echo $this->Paginator->sort('trntype'); ?></th>
 			<th><?php echo $this->Paginator->sort('first_name'); ?></th>
@@ -27,14 +31,16 @@
 			<th><?php echo $this->Paginator->sort('remarks'); ?></th>
 			<th><?php echo $this->Paginator->sort('photo_emp'); ?></th>
 			<th><?php echo $this->Paginator->sort('pict_name'); ?></th>
-			<th><?php echo $this->Paginator->sort('work_code'); ?></th>
-			<th><?php echo $this->Paginator->sort('group_code'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($employees as $employee): ?>
 	<tr>
 		<td><?php echo h($employee['Employee']['id']); ?>&nbsp;</td>
 		<td><?php echo h($employee['Employee']['employee_code']); ?>&nbsp;</td>
+		<td><?php echo h($employee['Employee']['work_id']); ?>&nbsp;</td>
+		<td><?php echo h($employee['Employee']['group_id']); ?>&nbsp;</td>
+		<td><?php echo h($employee['Employee']['created']); ?>&nbsp;</td>
+		<td><?php echo h($employee['Employee']['modified']); ?>&nbsp;</td>
 		<td><?php echo h($employee['Employee']['percent']); ?>&nbsp;</td>
 		<td><?php echo h($employee['Employee']['trntype']); ?>&nbsp;</td>
 		<td><?php echo h($employee['Employee']['first_name']); ?>&nbsp;</td>
@@ -58,8 +64,6 @@
 		<td><?php echo h($employee['Employee']['remarks']); ?>&nbsp;</td>
 		<td><?php echo h($employee['Employee']['photo_emp']); ?>&nbsp;</td>
 		<td><?php echo h($employee['Employee']['pict_name']); ?>&nbsp;</td>
-		<td><?php echo h($employee['Employee']['work_code']); ?>&nbsp;</td>
-		<td><?php echo h($employee['Employee']['group_code']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $employee['Employee']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $employee['Employee']['id'])); ?>

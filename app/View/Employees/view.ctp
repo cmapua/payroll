@@ -11,6 +11,26 @@
 			<?php echo h($employee['Employee']['employee_code']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Work Id'); ?></dt>
+		<dd>
+			<?php echo h($employee['Employee']['work_id']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Group Id'); ?></dt>
+		<dd>
+			<?php echo h($employee['Employee']['group_id']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Created'); ?></dt>
+		<dd>
+			<?php echo h($employee['Employee']['created']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Modified'); ?></dt>
+		<dd>
+			<?php echo h($employee['Employee']['modified']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Percent'); ?></dt>
 		<dd>
 			<?php echo h($employee['Employee']['percent']); ?>
@@ -124,16 +144,6 @@
 		<dt><?php echo __('Pict Name'); ?></dt>
 		<dd>
 			<?php echo h($employee['Employee']['pict_name']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Work Code'); ?></dt>
-		<dd>
-			<?php echo h($employee['Employee']['work_code']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Group Code'); ?></dt>
-		<dd>
-			<?php echo h($employee['Employee']['group_code']); ?>
 			&nbsp;
 		</dd>
 	</dl>

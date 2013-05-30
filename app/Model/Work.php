@@ -1,14 +1,12 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Employee Model
+ * Work Model
  *
- * @property Work $Work
- * @property Group $Group
- * @property CashAdvance $CashAdvance
+ * @property Employee $Employee
  * @property Transaction $Transaction
  */
-class Employee extends AppModel {
+class Work extends AppModel {
 
 /**
  * Validation rules
@@ -16,7 +14,17 @@ class Employee extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'employee_code' => array(
+		'work_code' => array(
+			'notempty' => array(
+				'rule' => array('notempty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'work_type' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -31,36 +39,14 @@ class Employee extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
- * belongsTo associations
- *
- * @var array
- */
-	public $belongsTo = array(
-		'Work' => array(
-			'className' => 'Work',
-			'foreignKey' => 'work_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'Group' => array(
-			'className' => 'Group',
-			'foreignKey' => 'group_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
-
-/**
  * hasMany associations
  *
  * @var array
  */
 	public $hasMany = array(
-		'CashAdvance' => array(
-			'className' => 'CashAdvance',
-			'foreignKey' => 'employee_id',
+		'Employee' => array(
+			'className' => 'Employee',
+			'foreignKey' => 'work_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
@@ -73,7 +59,7 @@ class Employee extends AppModel {
 		),
 		'Transaction' => array(
 			'className' => 'Transaction',
-			'foreignKey' => 'employee_id',
+			'foreignKey' => 'work_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',

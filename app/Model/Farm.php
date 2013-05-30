@@ -1,14 +1,12 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Employee Model
+ * Farm Model
  *
- * @property Work $Work
- * @property Group $Group
  * @property CashAdvance $CashAdvance
  * @property Transaction $Transaction
  */
-class Employee extends AppModel {
+class Farm extends AppModel {
 
 /**
  * Validation rules
@@ -16,7 +14,17 @@ class Employee extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'employee_code' => array(
+		'farm_code' => array(
+			'notempty' => array(
+				'rule' => array('notempty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'farm_name' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -31,28 +39,6 @@ class Employee extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
- * belongsTo associations
- *
- * @var array
- */
-	public $belongsTo = array(
-		'Work' => array(
-			'className' => 'Work',
-			'foreignKey' => 'work_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'Group' => array(
-			'className' => 'Group',
-			'foreignKey' => 'group_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
-
-/**
  * hasMany associations
  *
  * @var array
@@ -60,7 +46,7 @@ class Employee extends AppModel {
 	public $hasMany = array(
 		'CashAdvance' => array(
 			'className' => 'CashAdvance',
-			'foreignKey' => 'employee_id',
+			'foreignKey' => 'farm_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
@@ -73,7 +59,7 @@ class Employee extends AppModel {
 		),
 		'Transaction' => array(
 			'className' => 'Transaction',
-			'foreignKey' => 'employee_id',
+			'foreignKey' => 'farm_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
