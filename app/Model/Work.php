@@ -8,6 +8,7 @@ App::uses('AppModel', 'Model');
  */
 class Work extends AppModel {
 
+	public $displayField = 'work_code';
 /**
  * Validation rules
  *

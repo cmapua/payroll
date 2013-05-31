@@ -7,6 +7,7 @@ App::uses('AppModel', 'Model');
  */
 class Group extends AppModel {
 
+	public $displayField = 'group_code';
 /**
  * Validation rules
  *

@@ -7,7 +7,8 @@ App::uses('AppModel', 'Model');
  * @property Transaction $Transaction
  */
 class Farm extends AppModel {
-
+	
+	public $displayField = 'farm_code';
 /**
  * Validation rules
  *

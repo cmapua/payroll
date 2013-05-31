@@ -10,6 +10,7 @@ App::uses('AppModel', 'Model');
  */
 class Employee extends AppModel {
 
+	public $displayField = 'employee_code';
 /**
  * Validation rules
  *
