@@ -11,11 +11,6 @@
 			<?php echo h($employee['Employee']['employee_code']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Work Id'); ?></dt>
-		<dd>
-			<?php echo h($employee['Employee']['work_id']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Group Id'); ?></dt>
 		<dd>
 			<?php echo h($employee['Employee']['group_id']); ?>
@@ -59,46 +54,6 @@
 		<dt><?php echo __('Empaddr'); ?></dt>
 		<dd>
 			<?php echo h($employee['Employee']['empaddr']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Farm'); ?></dt>
-		<dd>
-			<?php echo h($employee['Employee']['farm']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Farmname'); ?></dt>
-		<dd>
-			<?php echo h($employee['Employee']['farmname']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Farm2'); ?></dt>
-		<dd>
-			<?php echo h($employee['Employee']['farm2']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Fn2'); ?></dt>
-		<dd>
-			<?php echo h($employee['Employee']['fn2']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Farm3'); ?></dt>
-		<dd>
-			<?php echo h($employee['Employee']['farm3']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Fn3'); ?></dt>
-		<dd>
-			<?php echo h($employee['Employee']['fn3']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Groupcode'); ?></dt>
-		<dd>
-			<?php echo h($employee['Employee']['groupcode']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Groupname'); ?></dt>
-		<dd>
-			<?php echo h($employee['Employee']['groupname']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Rate'); ?></dt>

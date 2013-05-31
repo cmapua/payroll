@@ -49,10 +49,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				if(!empty($user)) {
 					echo 'currently logged in as ', $user['username'];
 					echo ' ';
-					echo $this->Html->link(__('Logout'), array('action' => 'logout'));
+					echo $this->Html->link(__('Logout'), '/users/logout');
 				} else {
 					echo 'you are not logged in. ';
-					echo $this->Html->link(__('Log in'), array('action' => 'login'));
+					echo $this->Html->link(__('Log in'), '/users/login');
 				}
 			?>
 			<?php echo $this->Session->flash(); ?>

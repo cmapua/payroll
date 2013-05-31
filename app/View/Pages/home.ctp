@@ -25,6 +25,14 @@ App::uses('Debugger', 'Utility');
 <p>
 	<a href="http://cakephp.org/changelogs/<?php echo Configure::version(); ?>"><?php echo __d('cake_dev', 'Read the changelog'); ?> </a>
 </p>
+
+<p>
+	<h3>Temporary main menu</h3>
+	<?php echo $this->Html->link('Employees', '/employees/index'); ?></br>
+	<?php echo $this->Html->link('Employee Groups', '/groups/index'); ?></br>
+	<?php echo $this->Html->link('Works', '/works/index'); ?></br>
+</p>
+
 <?php
 if (Configure::read('debug') > 0):
 	Debugger::checkSecurityKeys();

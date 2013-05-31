@@ -61,7 +61,6 @@
 	<tr>
 		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Employee Code'); ?></th>
-		<th><?php echo __('Work Id'); ?></th>
 		<th><?php echo __('Group Id'); ?></th>
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
@@ -71,14 +70,6 @@
 		<th><?php echo __('Last Name'); ?></th>
 		<th><?php echo __('MI'); ?></th>
 		<th><?php echo __('Empaddr'); ?></th>
-		<th><?php echo __('Farm'); ?></th>
-		<th><?php echo __('Farmname'); ?></th>
-		<th><?php echo __('Farm2'); ?></th>
-		<th><?php echo __('Fn2'); ?></th>
-		<th><?php echo __('Farm3'); ?></th>
-		<th><?php echo __('Fn3'); ?></th>
-		<th><?php echo __('Groupcode'); ?></th>
-		<th><?php echo __('Groupname'); ?></th>
 		<th><?php echo __('Rate'); ?></th>
 		<th><?php echo __('Sssno'); ?></th>
 		<th><?php echo __('Gross'); ?></th>
@@ -96,7 +87,6 @@
 		<tr>
 			<td><?php echo $employee['id']; ?></td>
 			<td><?php echo $employee['employee_code']; ?></td>
-			<td><?php echo $employee['work_id']; ?></td>
 			<td><?php echo $employee['group_id']; ?></td>
 			<td><?php echo $employee['created']; ?></td>
 			<td><?php echo $employee['modified']; ?></td>
@@ -106,14 +96,6 @@
 			<td><?php echo $employee['last_name']; ?></td>
 			<td><?php echo $employee['MI']; ?></td>
 			<td><?php echo $employee['empaddr']; ?></td>
-			<td><?php echo $employee['farm']; ?></td>
-			<td><?php echo $employee['farmname']; ?></td>
-			<td><?php echo $employee['farm2']; ?></td>
-			<td><?php echo $employee['fn2']; ?></td>
-			<td><?php echo $employee['farm3']; ?></td>
-			<td><?php echo $employee['fn3']; ?></td>
-			<td><?php echo $employee['groupcode']; ?></td>
-			<td><?php echo $employee['groupname']; ?></td>
 			<td><?php echo $employee['rate']; ?></td>
 			<td><?php echo $employee['sssno']; ?></td>
 			<td><?php echo $employee['gross']; ?></td>
