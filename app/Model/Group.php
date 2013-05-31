@@ -49,7 +49,9 @@ class Group extends AppModel {
 			'foreignKey' => 'group_id',
 			'dependent' => false,
 			'conditions' => '',
-			'fields' => '',
+			'fields' => array(
+				'first_name', 'last_name'
+			),
 			'order' => '',
 			'limit' => '',
 			'offset' => '',

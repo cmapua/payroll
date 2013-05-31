@@ -41,7 +41,7 @@ class Employee extends AppModel {
 			'className' => 'Group',
 			'foreignKey' => 'group_id',
 			'conditions' => '',
-			'fields' => '',
+			'fields' => 'group_code',
 			'order' => ''
 		)
 	);
