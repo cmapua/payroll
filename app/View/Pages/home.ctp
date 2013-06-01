@@ -31,6 +31,9 @@ App::uses('Debugger', 'Utility');
 	<?php echo $this->Html->link('Employees', '/employees/index'); ?></br>
 	<?php echo $this->Html->link('Employee Groups', '/groups/index'); ?></br>
 	<?php echo $this->Html->link('Works', '/works/index'); ?></br>
+	<?php echo $this->Html->link('Farms', '/farms/index'); ?></br>
+	<?php echo $this->Html->link('Cash Advances', '/cash_advances/index'); ?></br>
+	<?php echo $this->Html->link('Transactions', '/transactions/index'); ?></br>
 </p>
 
 <?php

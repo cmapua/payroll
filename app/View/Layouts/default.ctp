@@ -50,11 +50,31 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					echo 'currently logged in as ', $user['username'];
 					echo ' ';
 					echo $this->Html->link(__('Logout'), '/users/logout');
+
+					//only show nav menu when logged in
+					//temporary navigation menu
+					//echo '&emsp;&emsp;';
+					echo '<fieldset><legend>Quick Navigation</legend>';
+					echo $this->Html->link('Employees', '/employees/index');
+					echo ' | ';
+					echo $this->Html->link('Employee Groups', '/groups/index');
+					echo ' | ';
+					echo $this->Html->link('Works', '/works/index');
+					echo ' | ';
+					echo $this->Html->link('Farms', '/farms/index');
+					echo ' | ';
+					echo $this->Html->link('Cash Advances', '/cash_advances/index');
+					echo ' | ';
+					echo $this->Html->link('Transactions', '/transactions/index');
+					echo '</fieldset>';
 				} else {
 					echo 'you are not logged in. ';
 					echo $this->Html->link(__('Log in'), '/users/login');
 				}
 			?>
+
+			
+
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
