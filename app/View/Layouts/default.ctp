@@ -55,6 +55,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					//temporary navigation menu
 					//echo '&emsp;&emsp;';
 					echo '<fieldset><legend>Quick Navigation</legend>';
+					echo $this->Html->link('Users', '/users/index');
+					echo ' | ';
 					echo $this->Html->link('Employees', '/employees/index');
 					echo ' | ';
 					echo $this->Html->link('Employee Groups', '/groups/index');
