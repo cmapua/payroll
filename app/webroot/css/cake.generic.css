@@ -111,6 +111,17 @@ p {
 	text-align: right;
 }
 
+/**
+	Additional rules
+**/
+#header a {
+	color: #fff;
+}
+
+#header strong {
+	color: #e32;
+}
+
 /** containers **/
 div.form,
 div.index,
