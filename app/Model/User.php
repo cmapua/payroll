@@ -47,7 +47,7 @@ class User extends AppModel {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow();
+		//$this->Auth->allow('logout');
 	}
 
 

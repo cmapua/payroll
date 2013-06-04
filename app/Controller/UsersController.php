@@ -9,7 +9,26 @@ class UsersController extends AppController {
 
 	public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('add');
+        $this->Auth->allow('add', 'initDB');
+    }
+
+    public function initDB() {
+    	$group = $this->User->UserGroup;
+    	//administrators
+    	$group->id = 1;
+    	$this->Acl->allow($group, 'controllers');
+
+    	//regulars
+    	$group->id = 2;
+    	$this->Acl->allow($group, 'controllers');
+    	$this->Acl->deny($group, 'controllers/Users');
+    	$this->Acl->allow($group, 'controllers/Users/login');
+    	$this->Acl->allow($group, 'controllers/Users/logout');
+    	$this->Acl->deny($group, 'controllers/Employees/delete');
+    	$this->Acl->deny($group, 'controllers/Farms/delete');
+    	$this->Acl->deny($group, 'controllers/Works/delete');
+    	echo "all done";
+    	exit;
     }
 
 	public function login() {
@@ -23,6 +42,7 @@ class UsersController extends AppController {
 	}
 
 	public function logout() {
+		$this->Session->setFlash('You are now logged out.');
 	    $this->redirect($this->Auth->logout());
 	}
 
