@@ -47,8 +47,12 @@ class EmployeesController extends AppController {
 				$this->Session->setFlash(__('The employee could not be saved. Please, try again.'));
 			}
 		}
+		$works = $this->Employee->Work->find('list');
+		$farms = $this->Employee->Farm->find('list');
 		$groups = $this->Employee->Group->find('list');
 		$this->set(compact('groups'));
+		$this->set(compact('works'));
+		$this->set(compact('farms'));
 	}
 
 /**

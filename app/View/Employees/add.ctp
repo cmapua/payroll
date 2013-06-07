@@ -3,9 +3,11 @@
 	<fieldset>
 		<legend><?php echo __('Add Employee'); ?></legend>
 	<?php
-		/*
+		
 		echo $this->Form->input('employee_code');
 		echo $this->Form->input('group_id');
+		echo $this->Form->input('Work');
+		echo $this->Form->input('Farm');
 		echo $this->Form->input('percent');
 		echo $this->Form->input('trntype');
 		echo $this->Form->input('first_name');
@@ -21,8 +23,8 @@
 		echo $this->Form->input('remarks');
 		echo $this->Form->input('photo_emp');
 		echo $this->Form->input('pict_name');
-		*/
-		echo $this->Form->inputs();
+		
+		//echo $this->Form->inputs();
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
