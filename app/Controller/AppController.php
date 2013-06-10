@@ -37,7 +37,8 @@ class AppController extends Controller {
         'Auth' => array(
             'authorize' => array(
                 'Actions' => array('actionPath' => 'controllers')
-            )
+            ),
+            'authError' => 'Unauthorized Access'
             //'loginRedirect' => array('controller' => 'pages', 'action' => 'home'),
             //'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home')
             //'logoutRedirect' => array('controller' => 'users', 'action' => 'login')
@@ -46,11 +47,39 @@ class AppController extends Controller {
     );
     public $helpers = array('Html', 'Form', 'Session');
 
+    public function beforeRender() {
+        $this->set('refer', $this->referer());
+    }
+
     public function beforeFilter() {
         $this->Auth->allow('display');
         //$this->Auth->allow();
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
         $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'login');
         $this->Auth->loginRedirect = array('controller' => 'pages', 'action' => 'home');
+        if (!is_null($this->Auth->User()) && $this->name != 'CakeError' && !$this->Acl->check(array(
+                'model' => 'User',
+                'foreign_key' => AuthComponent::user('id')),
+                $this->name . '/' . $this->request->params['action']
+        )) {
+
+
+            // Optionally log an ACL deny message in auth.log
+            CakeLog::write('auth', 'ACL DENY: ' . AuthComponent::user('username') .
+                ' tried to access ' . $this->name . '/' .
+                $this->request->params['action'] . '.'
+            );
+
+            $this->Session->setFlash('UNAUTHORIZED ACCESS');
+
+            // Render the forbidden page instead of the current requested page
+            echo $this->render('/Pages/forbidden');
+
+            /**
+             * Make sure we halt here, otherwise the forbidden message
+             * is just shown above the content.
+             */
+            exit;
+        }
     }
 }
